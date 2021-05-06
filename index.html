@@ -16,11 +16,13 @@
     <title>Document</title>
 
     <!-- BEGIN: CSS Assets -->
-    
-    
+    <link rel="stylesheet" href="./assets/index.c969fc48.css">
     <!-- END: CSS Assets -->
 
     <!-- BEGIN: Head JS Assets -->
+    <link rel="modulepreload" href="./assets/vendor.66d6b3cb.js">
+    <script type="module" crossorigin src="./assets/index.e796dcd6.js"></script>
+
     <script>
         // On page load or when changing themes, best to add inline in `head` to avoid FOUC
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -30,23 +32,18 @@
         }
     </script>
     <!-- END: Head JS Assets -->
-
     <!-- END: Default Head -->
-<script type="module" crossorigin src="./assets/index.e796dcd6.js"></script>
-  <link rel="modulepreload" href="./assets/vendor.66d6b3cb.js">
-  <link rel="stylesheet" href="./assets/index.c969fc48.css">
 </head>
 
 <body>
 
-    
-    <div class="app">
-        <!-- BEGIN: Header -->
-        <!-- END: Header -->
 
+    <div class="app">
         <!-- BEGIN: Loader -->
-        <div id="preloader" class="bg-blue-800 z-50 fixed top-0 bottom-0 left-0 right-0 w-screen h-screen overflow-hidden grid place-items-center select-none">
+        <div id="preloader"
+            class="bg-blue-800 z-50 fixed top-0 bottom-0 left-0 right-0 w-screen h-screen overflow-hidden grid place-items-center select-none">
             <div class="text-white text-6xl animate-pulse opacity-75">Resulog</div>
+            <span class="sr-only">Site Pre-Loader</span>
         </div>
         <!-- END: Loader -->
 
@@ -90,27 +87,46 @@
             <!-- BEGIN: Nav Menu -->
             <ul id="nav-menu"
                 class="bg-white dark:bg-theme-dark-container text-gray-900 dark:text-gray-300 fixed top-0 bottom-0 left-0 z-20 w-80 max-w-screen md:self-end md:flex-grow md:flex md:items-center md:bg-transparent md:dark:bg-transparent md:text-white md:static md:w-max md:space-x-1 text-sm font-medium whitespace-nowrap hide">
+
+                <!-- BEGIN: Mobile Side Menu Top Section -->
                 <li class="md:hidden text-center mx-auto bg-blue-800 dark:bg-theme-dark-body text-white">
+
+                    <!-- BEGIN: Mobile Side Menu Top Section: Header Row -->
                     <div class="flex justify-between items-center p-3">
+
+                        <!-- BEGIN: Mobile Side Menu Close Button -->
                         <a href="#" id="mobile-menu-back" class="inline-block focus:outline-none rtl:order-last">
                             <i data-feather="arrow-left"></i>
-                            <span class="sr-only">Close Mobile Menu</span>
+                            <span class="sr-only">Close Mobile Side Menu</span>
                         </a>
-                        <a href="#" id="dark-mode-mobile"
-                            class="focus:outline-none">
+                        <!-- END: Mobile Side Menu Close Button -->
+
+                        <!-- BEGIN: Mobile Side Menu Dark Mode Button -->
+                        <a href="#" id="dark-mode-mobile" class="focus:outline-none">
                             <i data-feather="sun"></i>
                             <span class="sr-only">Mobile Dark Mode Button</span>
                         </a>
+                        <!-- END: Mobile Side Menu Dark Mode Button -->
+
                     </div>
+                    <!-- END: Mobile Side Menu Top Section: Header Row -->
+
+                    <!-- BEGIN: Mobile Side Menu Top Section: Content Row -->
                     <div class="flex justify-center items-center px-2 py-10">
                         <p class="text-2xl">Welcome to our website!</p>
                     </div>
+                    <!-- END: Mobile Side Menu Top Section: Content Row -->
+
                 </li>
+                <!-- END: Mobile Side Menu Top Section -->
+
+                <!-- BEGIN: Nav Menu Items -->
                 <li>
                     <a href="#"
                         class="flex justify-between md:justify-center items-center px-5 py-4 rounded-b-none md:rounded-t-lg hover:bg-blue-100 md:hover:bg-blue-700 dark:hover:bg-gray-900 md:transition-colors active">
                         <span>خانه</span>
                         <i data-feather="home" class="ltr:order-last md:order-first md:ltr:mr-2 md:rtl:ml-2"></i>
+                        <span class="sr-only">Menu Item 1</span>
                     </a>
                 </li>
                 <li>
@@ -118,6 +134,7 @@
                         class="flex justify-between md:justify-center items-center px-5 py-4 rounded-b-none md:rounded-t-lg hover:bg-blue-100 md:hover:bg-blue-700 dark:hover:bg-gray-900 md:transition-colors">
                         <span>My Briefcase</span>
                         <i data-feather="briefcase" class="ltr:order-last md:order-first md:ltr:mr-2 md:rtl:ml-2"></i>
+                        <span class="sr-only">Menu Item 2</span>
                     </a>
                 </li>
                 <li>
@@ -125,24 +142,32 @@
                         class="flex justify-between md:justify-center items-center px-5 py-4 rounded-b-none md:rounded-t-lg  hover:bg-blue-100 md:hover:bg-blue-700 dark:hover:bg-gray-900 md:transition-colors">
                         <span>My Card</span>
                         <i data-feather="credit-card" class="ltr:order-last md:order-first md:ltr:mr-2 md:rtl:ml-2"></i>
+                        <span class="sr-only">Menu Item 3</span>
                     </a>
                 </li>
             </ul>
+            <!-- END: Nav Menu Items -->
             <!-- END: Nav Menu -->
 
             <!-- BEGIN: Nav Buttons -->
-            <div class="text-white dark:text-gray-300 order-first rtl:order-last md:order-last flex justify-center items-center space-x-2">
+            <div
+                class="text-white dark:text-gray-300 order-first rtl:order-last md:order-last flex justify-center items-center space-x-2">
+                <!-- BEGIN: Site Language Button -->
                 <a href="#"
                     class="p-2 rounded-full md:hover:bg-blue-700 dark:hover:bg-gray-900 md:transition-colors focus:outline-none inline-flex justify-center items-center space-x-2 cursor-pointer">
                     <i data-feather="globe" class="ltr:order-last md:order-first md:ltr:mr-2 md:rtl:ml-2"></i>
                     <span class="hidden lg:inline">فارسی</span>
                     <span class="sr-only">Site Language Button</span>
                 </a>
+                <!-- END: Site Language Button -->
+
+                <!-- BEGIN: Dark Mode Button -->
                 <a href="#" id="dark-mode"
                     class="hidden md:inline-block p-2 rounded-full md:hover:bg-blue-700 dark:hover:bg-gray-900 md:transition-colors focus:outline-none">
                     <i data-feather="sun"></i>
                     <span class="sr-only">Dark Mode Button</span>
                 </a>
+                <!-- END: Dark Mode Button -->
             </div>
             <!-- END: Nav Buttons -->
 
@@ -217,7 +242,7 @@
     </div>
 
     <!-- BEGIN: Footer JS Assets -->
-    
+
     <!-- END: Footer JS Assets -->
 </body>
 
